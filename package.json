@@ -7,7 +7,7 @@
     "scripts": {
         "pack": "electron-builder --dir",
         "dist": "electron-builder",
-        "windows": "electron-builder --win portable --ia32",
+        "windows": "electron-builder --win portable --ia32"
     },
     "dependencies": {
         "ajv": "^6.10.2",
