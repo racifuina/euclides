@@ -5,11 +5,9 @@
     "description": "App para calcular del Algoritmo de Euclides",
     "main": "main.js",
     "scripts": {
-        "start": "electron .",
         "pack": "electron-builder --dir",
         "dist": "electron-builder",
         "windows": "electron-builder --win portable --ia32",
-        "postinstall": "electron-builder install-app-deps"
     },
     "dependencies": {
         "ajv": "^6.10.2",
