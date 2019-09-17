@@ -1,11 +1,15 @@
 {
-    "name": "euclides",
+    "name": "euclides-app",
     "version": "1.0.0",
+    "homepage": "https://github.com/racifuina/euclides#readme",
     "description": "App para calcular del Algoritmo de Euclides",
     "main": "main.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "electron ."
+        "start": "electron .",
+        "pack": "electron-builder --dir",
+        "dist": "electron-builder",
+        "windows": "electron-builder --win portable --ia32",
+        "postinstall": "electron-builder install-app-deps"
     },
     "dependencies": {
         "ajv": "^6.10.2",
@@ -32,10 +36,12 @@
         "decamelize": "^1.2.0",
         "deep-extend": "^0.6.0",
         "delayed-stream": "^1.0.0",
+        "dotenv": "*",
         "ecc-jsbn": "^0.1.2",
         "electron-download": "^4.1.1",
         "env-paths": "^1.0.0",
         "error-ex": "^1.3.2",
+        "express": "^4.17.1",
         "extend": "^3.0.2",
         "extract-zip": "^1.6.7",
         "extsprintf": "^1.3.0",
@@ -144,6 +150,10 @@
     "devDependencies": {
         "electron": "^6.0.9"
     },
+    "build": {
+        "appId": "com.acifuina.euclides",
+        "buildDependenciesFromSource": true
+    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/racifuina/euclides.git"
@@ -152,6 +162,5 @@
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/racifuina/euclides/issues"
-    },
-    "homepage": "https://github.com/racifuina/euclides#readme"
+    }
 }
