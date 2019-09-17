@@ -105,14 +105,6 @@
         let secondRow;
         let thirdRow;
 
-        $(document).ready(function() {
-            $('a').on('click', (event) => {
-                event.preventDefault();
-                let link = event.target.href;
-                require("electron").shell.openExternal(link);
-            });
-        });
-
         function euclideanAlgorithm(originalA, originalB) {
             const a = Math.abs(originalA);
             const b = Math.abs(originalB);
