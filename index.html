@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="App para calcular del Algoritmo de Euclides">
+    <meta name="author" content="Rigoberto Acifuina">
+    <title>Algoritmo de Euclides</title>
+    <link href="./css/bootstrap-material-design.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 5rem;
+        }
+
+
+        footer {
+            bottom: 0px;
+            position: absolute;
+            width: 100%;
+            background: purple;
+            padding: 1rem;
+            color: white;
+            text-align: center;
+            font-family: helvetica, arial;
+        }
+
+    </style>
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Algoritmo de Euclides</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/racifuina/euclides">Código Fuente</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main role="main" class="container">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <div class="form-group">
+                    <label for="first-number">Primer Número</label>
+                    <input type="text" class="form-control number-input" id="first-number">
+                </div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="second-number">Segundo Número</label>
+                <input type="text" class="form-control number-input" id="second-number">
+            </div>
+        </div>
+        <button class="btn btn-primary btn-lg btn-block" type="submit" id="calculate-button">Calcular MCD</button>
+
+        <table class="table table-bordered">
+            <tbody id="table-body">
+
+            </tbody>
+        </table>
+        <center>
+            <h1 id="mcd-text"></h1>
+        </center>
+    </main>
+
+    <footer>
+        Desarrollado por <a href="http://rigoberto.acifuina.com" style="color: white;">Rigoberto Acifuina</a> <small>5190-14-207</small>
+        <br>
+        <small>para el curso Matemática Discreta Sección "E" 2019</small>
+    </footer>
+    <script>
+        window.$ = window.jQuery = require('./js/jquery-3.3.1.slim.min.js');
+        window.Spinner = require('./js/spin.min.js');
+
+    </script>
+    <script src="./js/popper.js"></script>
+    <script src="./js/bootstrap-material-design.js"></script>
+    <script>
+        require('./renderer.js');
+
+    </script>
+</body>
+
+</html>
